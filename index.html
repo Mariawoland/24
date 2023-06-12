@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: calibri;
+            flex-direction: column;
+            gap: 30px;
+            font-size: 25px;
+            text-align: center;
+            color: rgb(255, 115, 0);
+            background-color: rgb(247, 247, 205);
+            height: 100vh;
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+            font-size: 23px;
+            color: rgb(255, 115, 0);
+            background-color: rgb(252, 242, 242);
+            border: 2px solid rgb(255, 115, 0);
+            cursor: pointer;
+            font-family: calibri;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p style="padding-top:20px; line-height: 35px;">["თაია", "მარიამი", "ილია", "თორნიკე", "გიორგი",<br> "ლუკა", "ანა",
+        "ათანასე", "თომა"]
+    </p>
+
+    <p>ღილაკზე დაჭერისას მასივიდსან დაიბეჭდება<br> მხოლოდ ის სახელები რომელიც 5 ან ნაკლები სიმბოლოსგან შედგება.
+        / </p>
+
+    <button onclick="dawere()">დააჭირე</button>
+
+    <p id="masivis"></p>
+
+    <script>
+
+        function dawere() {
+
+            var saxelebi = ["თაია", "მარიამი", "ილია", "თორნიკე", "გიორგი", "ლუკა", "ანა", "ათანასე", "თომა"];
+
+            var chasaweri = "";
+
+            for (var i = 0; i < saxelebi.length; i++) {
+                if (saxelebi[i].length <= 5) {
+
+                    chasaweri += saxelebi[i] + '<span style="color: transparent;">__</span>';
+                }
+            }
+            document.getElementById("masivis").innerHTML = chasaweri;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
